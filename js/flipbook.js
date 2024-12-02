@@ -21,8 +21,8 @@ function openBook() {
     //for desktop styles
     if(screenWidth <= 600){
       book.style.transform = "translateX(50%)";
-      prevBtn.style.transform = "translateX(-80px)";
-      nextBtn.style.transform = "translateX(80px)";
+      prevBtn.style.transform = "translateX(-65px)";
+      nextBtn.style.transform = "translateX(65px)";
     }
     if(screenWidth > 600 && screenWidth < 900){
       book.style.transform = "translateX(50%)";
