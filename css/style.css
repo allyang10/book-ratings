@@ -17,13 +17,22 @@
 }
 
 .intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 1vw;
+}
+
+.intro img{
+  width: 50%;
+  height: 50%;
 }
 
 
 
 
 /* sticky header */
+
 
 .navbar {
   position: sticky;
@@ -32,9 +41,11 @@
   width: 100%;
   /* make navbar on top of everything else */
   z-index: 999;
+
 }
 
 .navbar ul {
+  background-color: rgb(61, 39, 22);
   list-style-type: none;
   padding: 0;
   overflow: hidden;
@@ -46,13 +57,13 @@
 
 .navbar li a {
   border: solid 4px rgb(61, 39, 22);
+  background-color: rgb(61, 39, 22);
   color:antiquewhite;
   display: block;
   text-align: center;
   font-size: large;
   padding: 1px px;
   text-decoration: none;
-  background-color: rgb(61, 39, 22);
 }
 
 /* link button styles */
@@ -103,7 +114,7 @@ h2{
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid rgb(255, 249, 241);
+  border-left: 3px solid rgb(61, 39, 22);
 }
 
 .back {
@@ -136,7 +147,10 @@ p{
 
 
 .back-content {
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* flipping effect */
@@ -206,6 +220,8 @@ i {
 h1, h3, h4{
   text-align: center;
 }
+
+
 
 
 
