@@ -131,6 +131,10 @@ h4{
   font-size: 80%;
 }
 
+p{
+  font-size: 11.5px;
+}
+
 
 .back-content {
   transform: rotateY(180deg)
@@ -147,7 +151,7 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin: 10px;
+  margin: 5px;
   transition: transform 0.5s;
 }
 
@@ -213,14 +217,14 @@ h1, h3, h4{
 
   a{
     padding: .9rem;
-    font-size: 1rem; /*smaller*/
+    font-size: 20px; /*smaller*/
     white-space: nowrap;
   }
 
-  /* .book {
-    width: 350px;
-    height: 500px;
-  } */
+  h4, p{
+    padding: 5%;
+    font-size: 12px;
+  }
 
   .front,
   .back {
@@ -231,18 +235,28 @@ h1, h3, h4{
   nav ul {
     flex-direction: row; /* Change to row on larger screens */
     justify-content: center; /* Center navigation items */
+    font-size: 2vw;
   }
+
 
 
 }
 /* Desktop styles */
 @media (min-width: 900px) {
+  .b3 a{
+    font-size: 30px;
+  }
+
+  h4, p{
+    padding: 3%;
+    font-size: 25px;
+  }
 
   /* make the buttons bigger so they fit the screen */
   nav ul a{
     margin:0%;
 
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   .book {
