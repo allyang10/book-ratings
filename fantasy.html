@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/d61b2a255e.js" crossorigin="anonymous"></script>
-  <!-- defer makes it load before the elements are loaded-->
+  <!-- javascript -->
   <script src = "js/flipbook.js" defer></script>
 </head>
 <!-- image on tab -->
@@ -21,5 +21,64 @@
        <li><a href="random.html">Other Recommendations</a></li>
     </ul>
   </nav>
+  <main>
+  <br><br>
+  <h1>My Top Fantasy Pick:</h1>
+  <!-- flipbook stuff -->
+  <div id="books" class="books">
+    <!-- Previous Button -->
+    <button id="prev-btn" aria-label="previous">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+    <!-- Book -->
+    <div id="book" class="book">
+      <!-- Paper 1 -->
+      <div id="p1" class="paper">
+          <div class="front">
+              <div id="f1" class="front-content">
+                  <img class = "cover-img" src="images/name_of_the_wind.jpeg" alt="The Name of The Wind cover">
+              </div>
+          </div>
+          <div class="back">
+              <div id="b1" class="back-content">
+                  <h1>Genre: Fantasy</h1>
+                  <h1>Author: Patrick Rothfuss</h1>
+                  <h1>Page Count: 665</h1>
+                  <h1># of Books: 3 (third one is probably never coming out so don't read if you don't like an unfinished series)</h1>
+              </div>
+          </div>
+      </div>
+      <!-- Paper 3 -->
+      <div id="p2" class="paper">
+          <div class="front">
+              <div id="f3" class="front-content">
+                  <h1>Read this series if you like: </h1>
+                  <p>- A genius protagonist</p>
+                  <p>- Beautiful writing</p>
+                  <p>- A very interesting magic system and characters</p>
+                  <p>- Multiple smaller stories instead of one larger plot</p>
+              </div>
+          </div>
+          <div class="back">
+              <div id="b3" class="back-content">
+                  <a href = "https://www.goodreads.com/book/show/186074.The_Name_of_the_Wind" target="_blank">
+                    <img src="images/goodreads.png" alt="goodreads link and logo">
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn" aria-label="next">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+  </div>
+
+     
+
+  
+
+</main>
 </body>
 </html>

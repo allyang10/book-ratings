@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Other Recommendations</title>
+  <title>Random Recommendations</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://kit.fontawesome.com/d61b2a255e.js" crossorigin="anonymous"></script>
+  <!-- javascript -->
+  <script src = "js/flipbook.js" defer></script>
 </head>
 <!-- image on tab -->
 <link rel="icon" href="images/favicon_2.ico">
@@ -19,5 +21,65 @@
        <li><a href="random.html">Other Recommendations</a></li>
     </ul>
   </nav>
+  <main>
+  <br><br>
+  <h1>My Top Random Pick:</h1>
+  <!-- flipbook stuff -->
+  <div id="books" class="books">
+    <!-- Previous Button -->
+    <button id="prev-btn" aria-label="previous">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+    <!-- Book -->
+    <div id="book" class="book">
+      <!-- Paper 1 -->
+      <div id="p1" class="paper">
+          <div class="front">
+              <div id="f1" class="front-content">
+                  <img class = "cover-img" src="images/darling_venom.jpg" alt="Darling Venom cover">
+              </div>
+          </div>
+          <div class="back">
+              <div id="b1" class="back-content">
+                  <h1>Genre: Romance</h1>
+                  <h1>Author: Parker S. Huntington</h1>
+                  <h1>Page Count: 700</h1>
+                  <h1>This is a standalone novel</h1>
+                  <h1>There are some heavier topics in this book so be sure to look up the content warnings</h1>
+              </div>
+          </div>
+      </div>
+      <!-- Paper 3 -->
+      <div id="p2" class="paper">
+          <div class="front">
+              <div id="f3" class="front-content">
+                  <h1>Read this series if you like: </h1>
+                  <p>- Really great, emotional writing</p>
+                  <p>- Unique, morally grey characters</p>
+                  <p>- A book that will make you feel all the emotions</p>
+                  <p>- A book that goes back and forth between different times in the main character's life</p>
+              </div>
+          </div>
+          <div class="back">
+              <div id="b3" class="back-content">
+                  <a href = "https://www.goodreads.com/book/show/150304767-darling-venom" target="_blank">
+                    <img src="images/goodreads.png" alt="goodreads link and logo">
+                  </a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- Next Button -->
+    <button id="next-btn" aria-label="next">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
+  </div>
+
+     
+
+  
+
+</main>
 </body>
 </html>
