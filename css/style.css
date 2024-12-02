@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
+  background-color:antiquewhite;
 }
 
 .books {
@@ -14,6 +15,11 @@
   font-family: sans-serif;
   background-color:antiquewhite;
 }
+
+.intro{
+  margin: 1vw;
+}
+
 
 
 
@@ -30,7 +36,6 @@
 
 .navbar ul {
   list-style-type: none;
-  margin: 5px;
   padding: 0;
   overflow: hidden;
 }
@@ -40,14 +45,14 @@
 }
 
 .navbar li a {
-  background-color: rgb(61, 39, 22);
-  color: white;
+  border: solid 4px rgb(61, 39, 22);
+  color:antiquewhite;
   display: block;
   text-align: center;
   font-size: large;
   padding: 1px px;
   text-decoration: none;
-
+  background-color: rgb(61, 39, 22);
 }
 
 /* link button styles */
@@ -55,12 +60,8 @@ nav ul{
   display: flex;
   flex-direction: column; /*make the buttons in a column so they are big enough */
   list-style-type: none; /* Remove bullet points */
-  background-color: rgb(72, 47, 35);
-  border: 2px black;
-  border-radius: 5px;
+  border: solid 1px 10px black;
 }
-
-
 
 /* Book */
 .book {
@@ -77,7 +78,6 @@ nav ul{
   top: 0;
   left: 0;
   perspective: 1500px;
-  
 
 }
 
@@ -90,7 +90,6 @@ h2{
 
 .front,
 .back {
-  background-color: rgb(255, 246, 236);
   position: absolute;
   width: 80%;
   height: 80%;
@@ -104,7 +103,7 @@ h2{
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid rgb(255, 255, 255);
+  border-left: 3px solid rgb(255, 249, 241);
 }
 
 .back {
@@ -151,7 +150,6 @@ button {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  margin: 5px;
   transition: transform 0.5s;
 }
 
@@ -237,7 +235,12 @@ h1, h3, h4{
     justify-content: center; /* Center navigation items */
     font-size: 2vw;
   }
-
+  .navbar ul a{
+    margin:0%;
+    background-color: rgb(61, 39, 22);
+    font-size: 1em;
+    color: antiquewhite;
+  }
 
 
 }
@@ -253,11 +256,6 @@ h1, h3, h4{
   }
 
   /* make the buttons bigger so they fit the screen */
-  nav ul a{
-    margin:0%;
-
-    font-size: 2em;
-  }
 
   .book {
     width: 400px;
