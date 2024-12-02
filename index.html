@@ -6,6 +6,8 @@
   <title>Allison's Book Rankings</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/d61b2a255e.js" crossorigin="anonymous"></script>
+
 </head>
 <!-- image on tab -->
 <link rel="icon" href="images/favicon_2.ico">
@@ -26,52 +28,57 @@
 
   <!-- flipbook stuff -->
   <div id="books" class="books">
-    <!-- Book 1 -->
-    <div id = "book" class = "book">
-      <!-- paper one -->
-       <div id="p1" class="paper">
-        <div class = "front">
-          <div id="f1" class="front-content">
-            <h2>Front 1</h2>
-            <!-- I think I want an image here -->
+    <!-- Previous Button -->
+    <button id="prev-btn">
+        <i class="fas fa-arrow-circle-left"></i>
+    </button>
+    <!-- Book -->
+    <div id="book" class="book">
+      <!-- Paper 1 -->
+      <div id="p1" class="paper">
+          <div class="front">
+              <div id="f1" class="front-content">
+                  <h1>Front 1</h1>
+              </div>
           </div>
-        </div>
-        <div class = "back">
-          <div id="b1" class="back-content">
-            <h2>Back 1</h2>
+          <div class="back">
+              <div id="b1" class="back-content">
+                  <h1>Back 1</h1>
+              </div>
           </div>
-        </div>
-       </div> <!-- paper one -->
+      </div>
+      <!-- Paper 2 -->
+      <div id="p2" class="paper">
+          <div class="front">
+              <div id="f2" class="front-content">
+                  <h1>Front 2</h1>
+              </div>
+          </div>
+          <div class="back">
+              <div id="b2" class="back-content">
+                  <h1>Back 2</h1>
+              </div>
+          </div>
+      </div>
+      <!-- Paper 3 -->
+      <div id="p3" class="paper">
+          <div class="front">
+              <div id="f3" class="front-content">
+                  <h1>Front 3</h1>
+              </div>
+          </div>
+          <div class="back">
+              <div id="b3" class="back-content">
+                  <h1>Back 3</h1>
+              </div>
+          </div>
+      </div>
     </div>
 
-    <!-- next button -->
-     <button id = "next-button">
-      <i class = "next.png"></i>
-     </button>
-
-  <!-- Book 2 -->
-  <div id = "book" class = "book">
-    <!-- paper one -->
-     <div id="p1" class="paper">
-      <div class = "front">
-        <div id="f1" class="front-content">
-          <h2>Front 1</h2>
-          <!-- I think I want an image here -->
-        </div>
-      </div>
-      <div class = "back">
-        <div id="b1" class="back-content">
-          <h2>Back 1</h2>
-        </div>
-      </div>
-     </div> <!-- paper one -->
-  </div>
-
-  <!-- next button -->
-   <button id = "next-button">
-    <i class = "next.png"></i>
-   </button>
-
+    <!-- Next Button -->
+    <button id="next-btn">
+        <i class="fas fa-arrow-circle-right"></i>
+    </button>
   </div>
 
      
@@ -80,4 +87,6 @@
 
   </body>
 </body>
+<!-- javascript -->
+<script src = "js/flipbook.js"></script>
 </html>
