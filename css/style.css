@@ -1,7 +1,9 @@
 * {
-  margin: 0;
+  margin: 1vw;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: antiquewhite;
 }
 
 .books {
@@ -14,14 +16,56 @@
   background-color: powderblue;
 }
 
+/* sticky header */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  /* make navbar on top of everything else */
+  z-index: 999;
+}
+
+.navbar ul {
+  list-style-type: none;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: left;
+}
+
+.navbar li a {
+  background-color: rgb(255, 247, 238);
+  display: block;
+  color: black;
+  text-align: center;
+  font-size: large;
+  padding: 1px 1px;
+  text-decoration: none;
+
+}
+
+/* link button styles */
+nav ul{
+  display: flex;
+  flex-direction: column; /*make the buttons in a column so they are big enough */
+  list-style-type: none; /* Remove bullet points */
+  background-color: rgb(72, 47, 35);
+}
+
 
 
 /* Book */
 .book {
   position: relative;
-  width: 350px;
-  height: 500px;
+  width: 200px;
+  height: 400px;
   transition: transform 0.5s;
+  background-color: beige;
 }
 
 .paper {
@@ -49,7 +93,7 @@
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid powderblue;
+  border-left: 3px solid rgb(252, 252, 252);
 }
 
 .back {
@@ -109,4 +153,74 @@ i {
 
 #p3 {
   z-index: 1;
+}
+
+
+/* Tablet styles */
+@media (min-width: 600px) {
+  /* bigger margin */
+  body{
+    margin: 2rem;
+  }
+
+  a{
+    padding: .9rem;
+    font-size: 1rem; /*smaller*/
+    white-space: nowrap;
+  }
+
+  /* home page styling */
+  #meet-list a {
+    display: block; /* Make each link occupy a full row */
+    /* make font size smaller so links can be seen */
+    font-size: 1rem; 
+    padding: 2%;
+  }
+  
+  nav ul {
+    flex-direction: row; /* Change to row on larger screens */
+    justify-content: center; /* Center navigation items */
+  }
+
+  .athlete-id {
+    max-width: 50%;
+    font-size: .5em;
+    flex: 1 1 calc(50% - 1em); /* two cards per row */
+  }
+
+
+  .athlete-id figure img {
+    max-width: 80%; /* Allow image to scale within its container */
+    width: 100%; /* Default size on larger screens */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+}
+/* Desktop styles */
+@media (min-width: 900px) {
+
+  /* make the buttons bigger so they fit the screen */
+  nav ul a{
+    font-size: 1.5em;
+  }
+
+  .book {
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+  }
+}
+
+/* changes for prefers-reduced-motion */
+@media screen and (prefers-reduced-motion: reduce) { 
+  .athlete-id:hover figure,
+  .athlete-id:focus figure {
+    opacity: 0; /* Fade out the figure */
+    transform: rotateY(360deg); /* stop the image from inverting */
+  }
+  .athlete-id figure {
+    transform: none; /* Disable flipping */
+    transition: opacity .8s ease-in-out; /* Fade in instead, and a little slower */
+  }
 }
