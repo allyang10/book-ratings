@@ -65,7 +65,7 @@ nav ul{
 /* Book */
 .book {
   position: relative;
-  width: 150px;
+  width: 180px;
   height: 300px;
   transition: transform 0.5s;
 }
