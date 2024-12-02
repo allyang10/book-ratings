@@ -274,16 +274,3 @@ h1, .paper h1{
     height: 600px;
   }
 }
-
-/* changes for prefers-reduced-motion */
-@media screen and (prefers-reduced-motion: reduce) { 
-  .athlete-id:hover figure,
-  .athlete-id:focus figure {
-    opacity: 0; /* Fade out the figure */
-    transform: rotateY(360deg); /* stop the image from inverting */
-  }
-  .athlete-id figure {
-    transform: none; /* Disable flipping */
-    transition: opacity .8s ease-in-out; /* Fade in instead, and a little slower */
-  }
-}
