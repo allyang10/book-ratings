@@ -5,6 +5,7 @@ const book = document.querySelector("#book");
 
 const paper1 = document.querySelector("#p1");
 const paper2 = document.querySelector("#p2");
+const img1 = document.querySelector("#cover-img");
 
 // Event Listener
 prevBtn.addEventListener("click", goPrevPage);
@@ -16,9 +17,23 @@ let numOfPapers = 2;
 let maxLocation = numOfPapers + 1;
 
 function openBook() {
-    book.style.transform = "translateX(50%)";
-    prevBtn.style.transform = "translateX(-180px)";
-    nextBtn.style.transform = "translateX(180px)";
+    const screenWidth = window.innerWidth
+    //for desktop styles
+    if(screenWidth <= 600){
+      book.style.transform = "translateX(50%)";
+      prevBtn.style.transform = "translateX(-80px)";
+      nextBtn.style.transform = "translateX(80px)";
+    }
+    if(screenWidth > 600 && screenWidth < 900){
+      book.style.transform = "translateX(50%)";
+      prevBtn.style.transform = "translateX(-130px)";
+      nextBtn.style.transform = "translateX(130px)";
+    }
+    else if (screenWidth >= 900){
+      book.style.transform = "translateX(50%)";
+      prevBtn.style.transform = "translateX(-200px)";
+      nextBtn.style.transform = "translateX(200px)";
+    }
 }
 
 function closeBook(isAtBeginning) {
@@ -39,6 +54,7 @@ function goNextPage() {
                 openBook();
                 paper1.classList.add("flipped");
                 paper1.style.zIndex = 1;
+              
                 break;
             case 2:
                 paper2.classList.add("flipped");
@@ -58,7 +74,7 @@ function goPrevPage() {
             case 2:
                 closeBook(true);
                 paper1.classList.remove("flipped");
-                paper1.style.zIndex = 2;
+                paper1.style.zIndex = 4;
                 break;
             case 3:
                 openBook();

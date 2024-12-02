@@ -1,9 +1,8 @@
 * {
-  margin: 1vw;
+  margin: 0vw;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Times New Roman', Times, serif;
-  background-color: antiquewhite;
 }
 
 .books {
@@ -13,8 +12,10 @@
   align-items: center;
 
   font-family: sans-serif;
-  background-color: powderblue;
+  background-color:antiquewhite;
 }
+
+
 
 /* sticky header */
 
@@ -24,13 +25,15 @@
   left: 0;
   width: 100%;
   padding: 0; /* Remove padding */
-  margin: 0; /* Remove margin */
+  margin: 0px; /* Remove margin */
   /* make navbar on top of everything else */
   z-index: 999;
 }
 
 .navbar ul {
   list-style-type: none;
+  margin: 5px;
+  padding: 0;
   overflow: hidden;
 }
 
@@ -39,12 +42,12 @@
 }
 
 .navbar li a {
-  background-color: rgb(255, 247, 238);
+  background-color: rgb(61, 39, 22);
+  color: white;
   display: block;
-  color: black;
   text-align: center;
   font-size: large;
-  padding: 1px 1px;
+  padding: 1px px;
   text-decoration: none;
 
 }
@@ -55,6 +58,8 @@ nav ul{
   flex-direction: column; /*make the buttons in a column so they are big enough */
   list-style-type: none; /* Remove bullet points */
   background-color: rgb(72, 47, 35);
+  border: 2px black;
+  border-radius: 5px;
 }
 
 
@@ -62,10 +67,9 @@ nav ul{
 /* Book */
 .book {
   position: relative;
-  width: 200px;
+  width: 250px;
   height: 400px;
   transition: transform 0.5s;
-  background-color: beige;
 }
 
 .paper {
@@ -75,25 +79,34 @@ nav ul{
   top: 0;
   left: 0;
   perspective: 1500px;
+  
 
+}
+
+h2{
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  justify-content: space-around;
 }
 
 .front,
 .back {
-  background-color: white;
+  background-color: rgb(255, 246, 236);
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   top: 0;
   left: 0;
   transform-origin: left;
   transition: transform 0.5s;
+  border: solid 5px rgb(61, 39, 22);
 }
 
 .front {
   z-index: 1;
   backface-visibility: hidden;
-  border-left: 3px solid rgb(252, 252, 252);
+  border-left: 3px solid rgb(255, 255, 255);
 }
 
 .back {
@@ -105,6 +118,7 @@ nav ul{
   width: 100%;
   height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -144,7 +158,7 @@ i {
 
 /* Paper stack order */
 #p1 {
-  z-index: 3;
+  z-index: 4;
 }
 
 #p2 {
@@ -154,6 +168,42 @@ i {
 #p3 {
   z-index: 1;
 }
+
+/* Customization */
+
+.book-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#b1 {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  justify-content: space-around;
+}
+
+#b1 h2 {
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+#b1 p {
+  margin-bottom: 20px;
+}
+
+h1, h3, h4{
+  text-align: center;
+}
+
 
 
 /* Tablet styles */
@@ -169,12 +219,15 @@ i {
     white-space: nowrap;
   }
 
-  /* home page styling */
-  #meet-list a {
-    display: block; /* Make each link occupy a full row */
-    /* make font size smaller so links can be seen */
-    font-size: 1rem; 
-    padding: 2%;
+  /* .book {
+    width: 350px;
+    height: 500px;
+  } */
+
+  .front,
+  .back {
+    width: 100%;
+    height: 100%;
   }
   
   nav ul {
@@ -182,18 +235,6 @@ i {
     justify-content: center; /* Center navigation items */
   }
 
-  .athlete-id {
-    max-width: 50%;
-    font-size: .5em;
-    flex: 1 1 calc(50% - 1em); /* two cards per row */
-  }
-
-
-  .athlete-id figure img {
-    max-width: 80%; /* Allow image to scale within its container */
-    width: 100%; /* Default size on larger screens */
-    height: auto; /* Maintain aspect ratio */
-  }
 
 }
 /* Desktop styles */
@@ -201,14 +242,14 @@ i {
 
   /* make the buttons bigger so they fit the screen */
   nav ul a{
+    margin:0%;
+
     font-size: 1.5em;
   }
 
   .book {
-    position: relative;
-    width: 350px;
-    height: 500px;
-    transition: transform 0.5s;
+    width: 400px;
+    height: 600px;
   }
 }
 
