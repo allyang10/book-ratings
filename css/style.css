@@ -111,6 +111,13 @@ h2{
   z-index: 0;
 }
 
+a{
+  text-decoration: none;
+  text-align: center;
+  color: black;
+  font-size: 150%;
+}
+
 .front-content,
 .back-content {
   width: 100%;
